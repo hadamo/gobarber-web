@@ -1,0 +1,107 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"plugin:@typescript-eslint/recommended",
+		"prettier/@typescript-eslint",
+		"plugin:prettier/recommended"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"react-hooks",
+		"@typescript-eslint",
+		"prettier"
+	],
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"prettier/prettier": "error",
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
+		"react-hooks/exhaustive-deps": "warn",
+		"no-use-before-define": "off",
+		"react/jsx-indent": "off",
+		"react/jsx-indent-props": "off",
+		"no-unused-expressions": "off",
+		"typescript-eslint/camelcase": "off",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".tsx"
+				]
+			}
+		],
+		"import/prefer-default-export": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"indent": [
+			"error",
+			2,
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": 1,
+				"outerIIFEBody": 1,
+				"// MemberExpression": null,
+				"FunctionDeclaration": {
+					"parameters": 1,
+					"body": 1
+				},
+				"FunctionExpression": {
+					"parameters": 1,
+					"body": 1
+				},
+				"CallExpression": {
+					"arguments": 1
+				},
+				"ArrayExpression": 1,
+				"ObjectExpression": 1,
+				"ImportDeclaration": 1,
+				"flatTernaryExpressions": false,
+				// list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+				"ignoredNodes": [
+					"JSXElement",
+					"JSXElement > *",
+					"JSXAttribute",
+					"JSXIdentifier",
+					"JSXNamespacedName",
+					"JSXMemberExpression",
+					"JSXSpreadAttribute",
+					"JSXExpressionContainer",
+					"JSXOpeningElement",
+					"JSXClosingElement",
+					"JSXText",
+					"JSXEmptyExpression",
+					"JSXSpreadChild"
+				],
+				"ignoreComments": false
+			}
+		],
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
+}
